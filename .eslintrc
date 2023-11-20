@@ -1,0 +1,41 @@
+{
+  "env": {
+    "mocha": true
+  },
+  "parser": "@babel/eslint-parser",
+  "plugins": ["import", "node", "promise", "standard"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:node/recommended",
+    "plugin:promise/recommended",
+    "standard"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".json"]
+      },
+      "alias": {
+        "map": [
+          ["@src", "./src"],
+          ["@test", "./test"]
+        ],
+        "extensions": [".js", ".jsx", ".json"]
+      }
+    }
+  },
+  "rules": {
+    "node/no-unpublished-import": ["error", { "allowModules": ["chai"] }],
+    "node/no-missing-import": "off",
+    "node/no-unsupported-features/es-syntax": "off",
+    "import/no-unresolved": "off",
+    "import/namespace": "off",
+    "import/no-duplicates": "off",
+    "import/default": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "comma-dangle": "off"
+  }
+}

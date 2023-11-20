@@ -1,0 +1,45 @@
+{
+  "name": "mocha-js-test-template",
+  "version": "1.0.0",
+  "description": "This is a Mocha template with NodeJS, Babel, Eslint and Prettier",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.17.0",
+    "npm": ">=8.15.0"
+  },
+  "keywords": [
+    "mocha",
+    "prettier",
+    "babel",
+    "eslint",
+    "nodejs"
+  ],
+  "scripts": {
+    "test": "env-cmd mocha --require @babel/register --reporter mochawesome --reporter-options code=false,reportDir=reports",
+    "watch": "env-cmd mocha --watch --require @babel/register --reporter mochawesome --reporter-options code=false,reportDir=reports",
+    "prettier:fix": "prettier --write 'src/**/*.js' 'test/**/*.js'",
+    "lint": "eslint 'src/**/*.js' 'test/**/*.js'",
+    "lint:fix": "eslint --fix 'src/**/*.js' 'test/**/*.js'"
+  },
+  "devDependencies": {
+    "@babel/core": "7.23.3",
+    "@babel/eslint-parser": "7.23.3",
+    "@babel/preset-env": "7.23.3",
+    "@babel/register": "7.22.15",
+    "babel-plugin-module-resolver": "5.0.0",
+    "chai": "4.3.10",
+    "env-cmd": "10.1.0",
+    "eslint": "8.54.0",
+    "eslint-config-standard": "17.1.0",
+    "eslint-plugin-import": "2.29.0",
+    "eslint-plugin-mocha": "10.2.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-standard": "5.0.0",
+    "mocha": "10.2.0",
+    "mochawesome": "7.1.3",
+    "mochawesome-report-generator": "6.2.0",
+    "module-alias": "2.2.3",
+    "prettier": "3.1.0"
+  }
+}
